@@ -1,4 +1,4 @@
-namespace kata_training;
+namespace kata_training.Katas;
 
 public class Kata1
 {
