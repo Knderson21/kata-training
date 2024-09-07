@@ -15,6 +15,7 @@ namespace kata_training.Katas;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Kata12
 {
@@ -31,5 +32,11 @@ public class Kata12
         }
 
         return string.Join(" ", words);
-  } 
+  }
+  
+  //alt solution
+  public static string ToJadenCase2(this string phrase)
+  {
+    return String.Join(" ", phrase.Split().Select(i => Char.ToUpper(i[0]) + i.Substring(1)));
+  }
 }
