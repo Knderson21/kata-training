@@ -54,4 +54,12 @@ public class Kata11
       return "Player 2 won!";
     }
   }
+
+  //alt 2
+  public string Rps3(string p1, string p2)
+  {
+    if(p1 == p2) return "Draw!";
+    int p = (p1 + p2) == "scissorspaper" || (p1 + p2) == "rockscissors" || (p1 + p2) == "paperrock" ? 1 : 2;
+    return "Player " + p + " won!";
+  }
 }
