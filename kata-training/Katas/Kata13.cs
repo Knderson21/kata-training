@@ -10,6 +10,9 @@ Note: The function accepts an integer and returns an integer.
 
 namespace kata_training.Katas;
 
+using System;
+using System.Linq;
+
 public class Kata13
 {
     public static int SquareDigits(int n)
@@ -55,5 +58,11 @@ public class Kata13
         }
 
         return int.Parse(output);
+    }
+
+    //alt solution 2
+    public static int SquareDigits4(int n)
+    {
+        return int.Parse(String.Concat(n.ToString().Select(a => (int)Math.Pow(char.GetNumericValue(a), 2))));
     }
 }
