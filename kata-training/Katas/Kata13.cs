@@ -10,21 +10,37 @@ Note: The function accepts an integer and returns an integer.
 
 namespace kata_training.Katas;
 
-public class Kata13 
+public class Kata13
 {
     public static int SquareDigits(int n)
     {
-      string x = n.ToString();
-      string result = "";
-      
-      for (int i = 0; i < x.Length; i++)
-      {
-        char c = x[i];
-        int num = Int32.Parse(c.ToString());
-        int squared = num * num;
-        result += squared.ToString();
-      }
-      
-      return Convert.ToInt32(result);
+        string x = n.ToString();
+        string result = "";
+
+        for (int i = 0; i < x.Length; i++)
+        {
+            char c = x[i];
+            int num = Int32.Parse(c.ToString());
+            int squared = num * num;
+            result += squared.ToString();
+        }
+
+        return Convert.ToInt32(result);
+    }
+
+    //Refactor
+    public static int SquareDigits2(int n)
+    {
+        string x = n.ToString();
+        string result = "";
+
+        foreach (var c in x)
+        {
+            int num = Int32.Parse(c.ToString());
+            int squared = num * num;
+            result += squared.ToString();
+        }
+
+        return Convert.ToInt32(result);
     }
 }
