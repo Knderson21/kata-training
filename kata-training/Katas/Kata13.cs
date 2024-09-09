@@ -66,7 +66,13 @@ public class Kata13
         return int.Parse(String.Concat(n.ToString().Select(a => (int)Math.Pow(char.GetNumericValue(a), 2))));
     }
 
-    //alt solution 3
+    /*alt solution 3 - from chatgpt
+     * Explanation:
+        n.ToString().Select(c => (int)Math.Pow(c - '0', 2)): Converts the number to a string, then selects each character, converts it to an integer (c - '0'), squares it (Math.Pow), and then converts the result back to a string.
+        string.Concat(...): Concatenates all the squared numbers into a single string.
+        int.Parse(...): Converts the resulting string back to an integer.
+        This approach reduces the number of lines of code and avoids explicitly managing the result string, making the code cleaner and more maintainable.
+     */
     public static int SquareDigits5(int n)
     {
         return int.Parse(string.Concat(n.ToString().Select(c => (int)Math.Pow(c - '0', 2))));
