@@ -65,4 +65,10 @@ public class Kata13
     {
         return int.Parse(String.Concat(n.ToString().Select(a => (int)Math.Pow(char.GetNumericValue(a), 2))));
     }
+
+    //alt solution 3
+    public static int SquareDigits5(int n)
+    {
+        return int.Parse(string.Concat(n.ToString().Select(c => (int)Math.Pow(c - '0', 2))));
+    }
 }
