@@ -20,7 +20,7 @@ using System.Globalization;
 
 public class Kata12
 {
-	public static string ToJadenCase(this string phrase)
+	public static string ToJadenCase(string phrase)
   { 
 		string[] words = phrase.Split(' ');
 
@@ -36,13 +36,13 @@ public class Kata12
   }
   
   //alt solution
-  public static string ToJadenCase2(this string phrase)
+  public static string ToJadenCase2(string phrase)
   {
     return String.Join(" ", phrase.Split().Select(i => Char.ToUpper(i[0]) + i.Substring(1)));
   }
   
   //alt solution2
-  public static string ToJadenCase3(this string phrase)
+  public static string ToJadenCase3(string phrase)
   {
     	return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(phrase);
   }
