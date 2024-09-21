@@ -1,3 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace kata_training;
 
-Console.WriteLine("Hello, World!");
+using System;
+using static Katas.Kata14;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+        Console.WriteLine(DuplicateCount("asdfg"));
+    }
+}
