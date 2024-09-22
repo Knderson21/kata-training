@@ -12,8 +12,7 @@ public class Kata14
 {
     public static int DuplicateCount(string str)
     {
-        List<char> chars = new List<char>();
-        int count = 0;
+        Dictionary<char, int> dict = new Dictionary<char, int>();
 
         foreach (char x in str)
         {
@@ -24,16 +23,16 @@ public class Kata14
                 y = Char.ToLower(y);
             }
 
-            if (!chars.Contains(y))
+            if (!dict.ContainsKey(y))
             {
-                chars.Add(y);
+                dict.Add(y, 1);
             }
             else
             {
-                count++;
+                dict[y]++;
             }
         }
 
-        return count;
+        return dict.Count(x => x.Value > 1);
     }
 }
