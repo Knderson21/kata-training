@@ -57,4 +57,10 @@ public class Kata14
     {
         return str.ToLower().GroupBy(c => c).Count(c => c.Count() > 1);
     }
+
+    /*
+     * Notes:
+     * - ToLower returns a copy of the string coverted to lowercase, still works if there are numeric values (ignores anything tht cant be converted)
+     * -
+     */
 }
