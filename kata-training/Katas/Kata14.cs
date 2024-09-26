@@ -61,6 +61,7 @@ public class Kata14
     /*
      * Notes:
      * - ToLower returns a copy of the string coverted to lowercase, still works if there are numeric values (ignores anything tht cant be converted)
-     * -
+     * - GroupBy groups elements by key(in this case, key is char)
+     * - Count is counting all the groups total, in which the count is greater than 1 (thats what is returned)
      */
 }
