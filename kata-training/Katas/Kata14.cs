@@ -50,4 +50,11 @@ public class Kata14
 
         return dict.Count(x => x.Value > 1);
     }
+
+
+    //alt solution
+    public static int DuplicateCount2(string str)
+    {
+        return str.ToLower().GroupBy(c => c).Count(c => c.Count() > 1);
+    }
 }
